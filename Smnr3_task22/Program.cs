@@ -22,21 +22,21 @@ int getUserValue(string message)
     int result = int.Parse(Console.ReadLine()!);
     return result;
 }
-void kvadrat(int N)
+void kvadrat(int n)
 {
     for (int i = 1; i < n + 1; i = i + 1)
-    int temp = i*i;
+ //   int temp = i*i;
     if (i < n)
     {
-        Console.Write($"{temp},");
+  //      Console.Write($"{temp},");
     }
     else
     {
-        Console.Write($"{temp}");
+   //     Console.Write($"{temp}");
     }
 }
-int n = getUserValue("Введите n");
-kvadrat(n);
+//int n = getUserValue("Введите n");
+//kvadrat(n);
 
 
 
