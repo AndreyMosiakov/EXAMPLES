@@ -72,7 +72,40 @@ for (int i = 2; i <= 10; i++)
 {
     for (int j = 2; j <= 10; j++)
     {
-        Console.WriteLine($"{i} * {j} = {i*j}"); // интерпаляция строк
+        //       Console.WriteLine($"{i} * {j} = {i*j}"); // интерпаляция строк
     }
-    Console.WriteLine("------------");
+    //   Console.WriteLine("------------");
 }
+
+// Работа с текстом
+// Дан текст.Нужно заменить все пробелы черточками,
+// маленькие буквы к на большие К, а большие С заменить на маленькие с
+
+string text = "- Я думаю, - сказал князь, улыбаясь, - что, "
+            + "ежели бы вас послали вместо нашего милого Винценгероде,"
+            + "вы бы взяли приступом согласие прусского короля.";
+
+// string s = "qwerty"  
+//             0123   ----  позиция символа
+// s[3]     --обращение к символу 
+
+string Replace(string text, char oldValue, char newValue) // метод и аргументы
+{
+    string result = String.Empty; // инициализация пустой строки
+
+    int lenght = text.Length; // ввод длины строки
+    for (int i = 0; i < lenght; i++)
+    {
+        if(text[i] == oldValue) result = result + $"{newValue}";
+        else result = result + $"{text[i]}";
+    }
+
+        return result;
+}
+
+string newText = Replace(text, ' ', '|'); // замена в тексте
+
+Console.WriteLine(newText);
+Console.WriteLine();
+newText = Replace(newText, 'к','К');  // замена в тексте
+Console.WriteLine(newText);
