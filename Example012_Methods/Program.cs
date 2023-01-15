@@ -13,7 +13,7 @@ void Method2(string msg) // принимает данные на вход но �
 }
 // Method2(msg:"Текст сообщения"); // вызов метода
 
-void Method21(string msg , int count) // принимает данные(несколько аргументов)на вход но ничего не возвращает 
+void Method21(string msg, int count) // принимает данные(несколько аргументов)на вход но ничего не возвращает 
 {
     int i = 0;
     while (i < count)
@@ -32,24 +32,47 @@ int Method3()
 }
 
 int year = Method3();  // вызов метода
-// Console.WriteLine(year);
+                       // Console.WriteLine(year);
 
 // Вид 4 , Методы принимающие данные и возвращающие значения
-string Method4 (int count, string text)
+//string Method4 (int count, string text)
+//{
+//  int i = 0; // цикл
+//string result = string.Empty;
+
+//while (i<count)
+//{
+//    result = result + text;
+//    i++;
+//} 
+//return result;
+//}
+//  string resu = Method4(10, "какой то текст ");
+//    Console.WriteLine(resu);
+
+//Пример с циклом FOR  
+
+string Method4(int count, string text)
 {
-    int i = 0; // цикл
     string result = string.Empty;
 
-    while (i<count)
+    for (int i = 0; i < count; i++)
     {
         result = result + text;
-        i++;
-    } 
+    }
     return result;
 }
-    string resu = Method4(10, "какой то текст ");
-    Console.WriteLine(resu);
+//string resu = Method4(10, "Z ");
+//Console.WriteLine(resu);
 
 
+// пример цикла в цикле с приминением FOR для создания таблицы умножения
 
-
+for (int i = 2; i <= 10; i++)
+{
+    for (int j = 2; j <= 10; j++)
+    {
+        Console.WriteLine($"{i} * {j} = {i*j}"); // интерпаляция строк
+    }
+    Console.WriteLine("------------");
+}
