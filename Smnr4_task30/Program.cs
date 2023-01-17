@@ -11,21 +11,21 @@ int[] GetArrayRandom ( int lenght) // функция ввода рандомно
     }
     return arr;
 }
-int[] array = GetArrayRandom(8);
 
-void kvadrat(int n)
+void showArray(int[] array)  // функция для вывода массива ,, сто бы после последнего символа не было запятой
 {
-    for (int i = 0; i < array.Length; i = i++)
+    Console.Write($"[");
+    for (int i = 0; i < array.Length; i++)
     {
-        if (i !< n)
-    }
-    
-    
-    {
-        Console.Write($"{temp},");
-    }
-    else
-    {
-       Console.Write($"{temp}");
+        if (i != array.Length -1) // !=  -оператор не равно
+        {
+        Console.Write($"{array[i]},");
+        }
+        else
+        {
+        Console.Write($"{array[i]}]");
+        }
     }
 }
+int[] array = GetArrayRandom(8);
+showArray(array);
