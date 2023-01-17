@@ -35,6 +35,7 @@ int year = Method3();  // вызов метода
                        // Console.WriteLine(year);
 
 // Вид 4 , Методы принимающие данные и возвращающие значения
+
 //string Method4 (int count, string text)
 //{
 //  int i = 0; // цикл
