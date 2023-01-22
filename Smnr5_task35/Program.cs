@@ -1,4 +1,4 @@
-﻿// Задача 33. Введите массив , напишите программу которая определяет присутствует ли заданное число в массиве.
+﻿// Задача 35. Задайте одномерный массив из 123 элементов, найдите кол-во элементов массива в отрезке[10,99].
 Console.Clear();
 
 int[] GetArrayRandom(int lenght, int strt, int end) // функция ввода рандомного массива
@@ -6,11 +6,10 @@ int[] GetArrayRandom(int lenght, int strt, int end) // функция ввода
     int[] arr = new int[lenght];
     for (int i = 0; i < lenght; i++)
     {
-        arr[i] = new Random().Next(strt, end + 1); // ограничил диапазон случайных чисел
+        arr[i] = new Random().Next(strt, end + 1);
     }
     return arr;
 }
-
 int GetFromUser(string message)
 {
     Console.WriteLine(message);
@@ -33,28 +32,22 @@ void showArray(int[] array)  // функция для вывода массив�
         }
     }
 }
-int searchNumber(int[] array, int number)
+int FindOfCount(int[] array, int strt, int end)
 {
-    int result = -1;
+    int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] == number)
+        if (array[i] >= strt && array[i] <= end)
         {
-            result = i;
-            break;
+            count += 1;
         }
     }
-    return result;
+    return count;
 }
-int number = GetFromUser("введите число");
-int[] array = GetArrayRandom(15, -10, 10);
+
+int[] array = GetArrayRandom(20, -100, 100);
 showArray(array);
-int findnumber = searchNumber(array, number);
-if(findnumber==-1)
-{
-    Console.WriteLine("Число не найдено");
-}
-else
-{
-    Console.WriteLine($"Число{number} есть в списке под индексом {findnumber}");
-}
+int strt = GetFromUser("введите начальное число диапазона");
+int end = GetFromUser("введите конечное число диапазона");
+int count = FindOfCount(array, strt, end);
+Console.WriteLine($" Кол-во элементов массива в диапазоне от {strt} до {end} равно {count}.");

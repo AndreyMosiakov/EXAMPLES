@@ -14,7 +14,7 @@ int[] GetArrayRandom(int lenght, int strt, int end) // функция ввода
 int GetFromUser(string message)
 {
     Console.WriteLine(message);
-    int userInt = int.Parse(Console.ReadLine());
+    int userInt = int.Parse(Console.ReadLine()!);
     return userInt;
 }
 
