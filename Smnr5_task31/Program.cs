@@ -57,7 +57,7 @@ void showArray(int[] array)  // функция для вывода массив�
 
 int[] array = GetArrayRandom(12, -9, 9);
 showArray(array);
-int SumOfPositive=GetSumOfPositive(array);
-int SumOfNegative=GetSumOfNegative(array);
+int SumOfPositive = GetSumOfPositive(array);
+int SumOfNegative = GetSumOfNegative(array);
 Console.WriteLine($"Сумма положительных {SumOfPositive}");
 Console.WriteLine($"Сумма отрицательных {SumOfNegative}");
