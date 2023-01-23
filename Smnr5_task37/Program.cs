@@ -33,7 +33,7 @@ void showArray(int[] array)  // функция для вывода массив�
         }
     }
 }
-int newArray(int[] array)
+int [] newArray(int[] array)
 {
     int newLenght = (int)Math.Ceiling(array.Length / 2.0); // метод округления
     int[] arr2 = new int[newLenght];
@@ -55,4 +55,4 @@ int number = GetFromUser("введите кол-во элементов масс
 int[] array = GetArrayRandom(number, 1, 11);
 showArray(array);
 int[] array2 = newArray(array);
-Console.WriteLine(array2);
+showArray(array2);
