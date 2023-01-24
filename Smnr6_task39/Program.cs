@@ -25,7 +25,6 @@ void showArray(int[] array)  // функция для вывода массив�
         }
     }
 }
-
 int[] reversArray(int[] array)
 {
     int fullLenght = array.Length;
