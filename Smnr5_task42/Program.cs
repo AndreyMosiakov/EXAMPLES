@@ -16,7 +16,7 @@ string GetBinaryNumber(int number)
     string result = string.Empty;
     while (number > 0)
     {
-        result = number % 2 + result; // деление на два с остатком (если есть остаток то это 1 нет это два)
+        result = number % 2 + result; // деление на два с остатком (если есть остаток то это 1 нет это ноль)
         number = number / 2;
     }
     return result;
