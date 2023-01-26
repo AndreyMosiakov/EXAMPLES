@@ -12,9 +12,30 @@ int GetFromUser(string message)
 string Fibbonachi(int number)
 {
 
-    for (int i = 0; i < number; i++)
+    int n1=0;
+    int n2=1;
+    string result =$"{n1}{n2}";
+    if (number==1)
     {
-        
+       result =$"{n1}";
     }
+     if (number==2)
+     {
+        result =$"{n1}{n2}";
+     }
+     else
+     {
+        for (int i = 2; i < number; i++)
+        {
+            int n =n1+n2;
+            result=result+n;
+            n1=n2;
+            n2=n;
+        }
+     }
+     return result;
 
 }
+ int number = GetFromUser("n");
+ string result = Fibbonachi(number);
+ Console.WriteLine(result);
