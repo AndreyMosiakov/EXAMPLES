@@ -1,5 +1,5 @@
-﻿// Задача 46: Задайте двумерный массив размерм M*N ,заполненый случайными цифрами.
-
+﻿// задача 48. задайте двумерный массив размера m  на n, каждый элемент находится по формуле Amn = m+n
+// выведите полученный массив на экран.
 Console.Clear();
 
 int GetDataFromUser(string messege)
@@ -17,23 +17,22 @@ void printInColor(string data)
     Console.ResetColor();
 }
 
-double[,] Get2DDoubleArray(int colLength, int rowLenght, int start, int end)
+int[,] Get2DIntArray(int colLength, int rowLenght, int start, int end)
 {
-    double[,] array = new double[colLength, rowLenght];
-    //int divider = 100; // const переменная которую больше нельзя изменить
+    int[,] array = new int[colLength, rowLenght];
+    
     for (int i = 0; i < colLength; i++)
     {
 
         for (int j = 0; j < rowLenght; j++)
         {
-            array[i, j] = new Random().Next(start, end + 1) + Math.Round(new Random().NextDouble(),2);// округлили хвостик до 2х знаков
-            //array[i, j] = new Random().Next(start * divider, end + 1 * divider) / (divider + 0.0);// конструкция перевода в дабл
+            array[i, j] = i+j;
         }
     }
     return array;
 }
-void print2DArray(double[,] array)
-{
+void print2DArray(int[,] array)
+{   
     for (int i = 0; i < array.GetLength(0); i++)
     {
         printInColor(i + "\t");
@@ -47,5 +46,6 @@ void print2DArray(double[,] array)
 }
 int n = GetDataFromUser("введите количество строк");
 int m = GetDataFromUser("введите количество столбцов");
-double[,] array = Get2DDoubleArray(n, m, 0, 1000);
+int[,] array = Get2DIntArray(n, m, 0, 1000);
 print2DArray(array);
+
