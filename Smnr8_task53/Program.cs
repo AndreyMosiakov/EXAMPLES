@@ -23,16 +23,16 @@ void printInColor(string data, ConsoleColor color)
     Console.ResetColor();
 }
 void printHeadOfArray(int lenght)
-{ 
+{
     Console.Write(" \t");
     for (int i = 0; i < lenght; i++)
     {
-        printInColor(i+ "\t", ConsoleColor.DarkGreen);
+        printInColor(i + "\t", ConsoleColor.DarkGreen);
     }
     Console.WriteLine();
 }
 void print2DArray(int[,] array)
-{   
+{
     printHeadOfArray(array.GetLength(1));
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -49,15 +49,15 @@ int[,] swapRows(int[,] array, int row1, int row2)
 {
     for (int i = 0; i < array.GetLength(1); i++)
     {
-        int tmp = array[row1,i];
-        array[row1,i]=array[row2,i];
-        array[row2,i]=tmp;
+        int tmp = array[row1, i];
+        array[row1, i] = array[row2, i];
+        array[row2, i] = tmp;
     }
     return array;
 }
 
 Console.Clear();
-int[,] array = Get2DIntArray(5,5,-5,5);
+int[,] array = Get2DIntArray(5, 5, -5, 5);
 print2DArray(array);
-int[,] swappedArray = swapRows(array,0,array.GetLength(0)-1);
+int[,] swappedArray = swapRows(array, 0, array.GetLength(0) - 1);
 print2DArray(array);
