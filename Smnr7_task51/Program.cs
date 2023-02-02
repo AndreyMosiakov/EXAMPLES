@@ -8,7 +8,7 @@ int GetDataFromUser(string messege)
     Console.ForegroundColor = ConsoleColor.DarkGreen;
     Console.WriteLine(messege);
     Console.ResetColor();
-    int result = int.Parse(Console.ReadLine());
+    int result = int.Parse(Console.ReadLine()!);
     return result;
 }
 void printInColor(string data)
